@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Committee</string>
+    <string name="firstname">Firstname</string>
+    <string name="lastname">Lastname</string>
+    <string name="bio">Bio</string>
+    <string name="finish">Finish</string>
+    <string name="committee_logo">Committee Image</string>
+    <string name="committee_name">Your committee name</string>
+    <string name="description">Description</string>
+    <string name="roles">Roles</string>
+    <string name="add">ADD</string>
+    <string name="add_new_role">Add new role</string>
+    <string name="create_committee">Create Committee</string>
+    <string name="my_committees">My Committees</string>
+    <string name="type_a_message">type a message</string>
+    <string name="attach_file">attach file</string>
+    <string name="profile_image">Profile Image</string>
+    <string name="user_profile_picture">user profile picture</string>
+    <plurals name="days_ago">
+        <item quantity="one">%d day ago</item>
+        <item quantity="other">%d days ago</item>
+    </plurals>
+    <string name="whitespace"> </string>
+    <string name="remove">Remove</string>
+    <string name="email_address">Email Address</string>
+    <string name="enter_role">Role in the committee</string>
+    <string name="add_member">Add Member</string>
+    <string name="add_a_new_user">Add a new user</string>
+    <string name="close_dialog">Close dialog</string>
+    <string name="finishing_up_please_wait">Finishing up, please wait</string>
+    <string name="initial_upload_progress">0/0 bytes</string>
+    <string name="cancel_upload">Cancel Upload</string>
+    <string name="file_content_type">File content type</string>
+    <string name="empty_repository_be_the_first_to_upload_a_file">Empty Repository, be the first to upload a file</string>
+</resources>

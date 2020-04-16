@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="committee"
+            type="com.james.project.committee.models.Committee" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:background="?attr/selectableItemBackground"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:id="@+id/committee_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/committee_logo_background"
+            android:contentDescription="@string/committee_logo"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:textToImage="@{committee.name}"
+            tools:text="A" />
+
+        <TextView
+            android:id="@+id/committee_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:maxLines="1"
+            android:text="@{committee.name}"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/last_message_timestamp"
+            app:layout_constraintStart_toEndOf="@id/committee_image"
+            app:layout_constraintTop_toTopOf="@id/committee_image"
+            tools:text="My Committee" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@{committee.description}"
+            app:layout_constraintEnd_toEndOf="@id/committee_name"
+            app:layout_constraintStart_toStartOf="@id/committee_name"
+            app:layout_constraintTop_toBottomOf="@id/committee_name"
+            tools:text="Ade: last Message" />
+
+        <TextView
+            android:id="@+id/last_message_timestamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/committee_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/committee_image"
+            tools:text="10:45pm" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
