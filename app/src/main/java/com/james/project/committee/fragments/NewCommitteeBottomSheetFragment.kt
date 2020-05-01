@@ -33,7 +33,7 @@ class NewCommitteeBottomSheetFragment : BaseBottomSheetDialogFragment() {
         viewModel.createDone.observe(viewLifecycleOwner, Observer {
             if (it) {
                 Toast.makeText(
-                    context!!,
+                    requireContext(),
                     "Setting up your new committee, please wait!!!",
                     Toast.LENGTH_LONG
                 ).show()

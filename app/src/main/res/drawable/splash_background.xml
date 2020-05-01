@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape>
+            <gradient
+                android:angle="270"
+                android:centerColor="@color/colorPrimary"
+                android:endColor="@android:color/white"
+                android:startColor="@android:color/white" />
+        </shape>
+    </item>
+
+    <item>
+        <bitmap
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:src="@drawable/ic_group"
+            android:tileMode="disabled" />
+    </item>
+
+</layer-list>

@@ -30,10 +30,10 @@ class CommitteeUsersFragment : Fragment() {
     ): View? {
         val binding = LayoutComDetBinding.inflate(inflater, container, false)
         val viewmodel: CommitteeViewModel by activityViewModels()
-        binding.fab.setImageDrawable(ContextCompat.getDrawable(context!!, R.drawable.ic_add_user))
+        binding.fab.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.ic_add_user))
         binding.viewmodel = viewmodel
         binding.lifecycleOwner = viewLifecycleOwner
-        binding.rv.layoutManager = GridLayoutManager(context!!, 2)
+        binding.rv.layoutManager = GridLayoutManager(requireContext(), 2)
         viewmodel.showAddNewUserButton.observe(viewLifecycleOwner, Observer {
             binding.fab.visibility = if (it) View.VISIBLE else View.GONE
         })

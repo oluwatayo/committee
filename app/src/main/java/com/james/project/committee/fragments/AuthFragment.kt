@@ -6,8 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -17,7 +17,6 @@ import com.google.android.material.snackbar.Snackbar
 import com.james.project.committee.R
 import com.james.project.committee.databinding.FragmentAuthBinding
 import com.james.project.committee.viewmodels.AuthViewModel
-import com.james.project.committee.viewmodels.GlobalViewModelFactory
 import timber.log.Timber
 import java.lang.Exception
 
@@ -25,7 +24,7 @@ class AuthFragment : Fragment() {
 
     private val RC_SIGN_IN: Int = 1002
     private lateinit var googleSignInClient: GoogleSignInClient
-    private lateinit var viewModel: AuthViewModel
+    private val viewModel: AuthViewModel by viewModels()
     private lateinit var binding: FragmentAuthBinding
 
     override fun onCreateView(
@@ -34,9 +33,7 @@ class AuthFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentAuthBinding.inflate(inflater, container, false)
-        val factory = GlobalViewModelFactory(activity!!.application)
-        viewModel =
-            ViewModelProvider(this, factory).get(AuthViewModel::class.java)
+
         binding.viewmodel = viewModel
         binding.lifecycleOwner = this.viewLifecycleOwner
         val token = getString(R.string.default_web_client_id)
@@ -44,7 +41,7 @@ class AuthFragment : Fragment() {
             .requestIdToken(token)
             .requestEmail()
             .build()
-        googleSignInClient = GoogleSignIn.getClient(context!!, gso)
+        googleSignInClient = GoogleSignIn.getClient(requireContext(), gso)
 
         viewModel.googleSignInLiveData.observe(viewLifecycleOwner, Observer {
             if (it) {
@@ -83,7 +80,6 @@ class AuthFragment : Fragment() {
         }
     }
 
-    fun showSnackbarMessage(message: String) {
-        Snackbar.make(binding.mainCoordinator, message, Snackbar.LENGTH_LONG).show();
-    }
+    fun showSnackbarMessage(message: String) =
+        Snackbar.make(binding.mainCoordinator, message, Snackbar.LENGTH_LONG).show()
 }

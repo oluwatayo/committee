@@ -1,11 +1,10 @@
 package com.james.project.committee.viewmodels
 
-import android.app.Application
 import android.text.TextUtils
 import android.view.View
-import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -15,7 +14,7 @@ import com.james.project.committee.models.Users
 import com.james.project.committee.models.getUserTableName
 import com.pixplicity.easyprefs.library.Prefs
 
-class AuthViewModel(application: Application) : AndroidViewModel(application) {
+class AuthViewModel : ViewModel() {
     companion object {
         const val SIGN_UP_COMPLETE = "sign_up_done"
         const val USER_FIRST_NAME = "firstname"

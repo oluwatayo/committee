@@ -32,4 +32,7 @@
     <string name="cancel_upload">Cancel Upload</string>
     <string name="file_content_type">File content type</string>
     <string name="empty_repository_be_the_first_to_upload_a_file">Empty Repository, be the first to upload a file</string>
+    <string name="banner">Banner</string>
+    <string name="app_description">Committee is a mobile based group messaging and knowledge sharing platform for making informed decisions among university communities. Also has a repository for sharing of files</string>
+    <string name="start">Get Started</string>
 </resources>
