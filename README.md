@@ -1,8 +1,7 @@
-## Committee is a mobile based group messaging and knowledge sharing platform for making informed decisions among university communities. Also has a repository for sharing of files
+##### Committee is a mobile based group messaging and knowledge sharing platform for making informed decisions among university communities. Also has a repository for sharing of files
 
 
------------- | ------------- | ------------------------------------------- |
-![Imgur](https://i.imgur.com/5XEiv1I.png) | ![Imgur](https://i.imgur.com/LZyFXco.png)| ![Imgur](https://i.imgur.com/GksliGv.png) |
+<img src="https://i.imgur.com/5XEiv1I.png" width="300" height="600" /> &nbsp;&nbsp; <img src="https://i.imgur.com/LZyFXco.png" width="300" height="600" /> &nbsp;&nbsp; <img src="https://i.imgur.com/LZyFXco.png" width="300" height="600" />
 
 
 ## Want to check it out ?
